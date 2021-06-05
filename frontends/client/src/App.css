@@ -1,0 +1,12 @@
+body {
+	margin: 0;
+}
+* {
+	word-wrap: normal;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}

@@ -1,0 +1,5 @@
+{
+  "verbose": false,
+  "watch": ["./ssr"],
+  "exec": "webpack --mode=development --config webpack.server.js && node ./build/server.js"
+}
