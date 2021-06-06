@@ -2,7 +2,7 @@ import React from 'react';
 import { CustomLogin } from '../../libs/CustomLogin';
 import { CustomRegister } from '../../libs/CustomRegister';
 import { CustomButton, CustomModal } from './../../libs';
-const Homepage = () => {
+export const Homepages = () => {
   const click = (event: React.MouseEvent<{}>) => {
     event.preventDefault();
     console.log('click ');
@@ -28,4 +28,3 @@ const Homepage = () => {
     </div>
   );
 };
-export default Homepage;

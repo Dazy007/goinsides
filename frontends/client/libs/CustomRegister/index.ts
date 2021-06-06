@@ -1,0 +1,1 @@
+export { CustomRegister } from './CustomRegister';
