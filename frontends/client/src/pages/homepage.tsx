@@ -1,6 +1,6 @@
 import React from 'react';
 import { CustomButton } from './../../libs';
-export const Homepages = () => {
+export const Homepage = () => {
   const click = (event: React.MouseEvent<{}>) => {
     event.preventDefault();
     console.log('click ');
