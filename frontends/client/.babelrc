@@ -13,6 +13,7 @@
     "@babel/preset-typescript"
   ],
   "plugins": [
+    "@loadable/babel-plugin",
     "@babel/plugin-proposal-class-properties",
     "react-hot-loader/babel"
   ]

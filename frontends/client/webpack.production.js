@@ -1,5 +1,5 @@
 const path = require('path');
-
+const LoadablePlugin = require('@loadable/webpack-plugin');
 const CURRENT_WD = process.cwd();
 
 const config = {
@@ -8,7 +8,7 @@ const config = {
   output: {
     path: path.join(CURRENT_WD, '/build/'),
     filename: 'bundle.js',
-    publicPath: '/build/',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -26,6 +26,7 @@ const config = {
       },
     ],
   },
+  plugins: [new LoadablePlugin()],
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
