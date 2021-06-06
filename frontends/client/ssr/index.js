@@ -56,8 +56,8 @@ app.get('*', (req, res) => {
         <meta charset="UTF-8">
         <base href="/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Goinsides - Marketing tools</title>
-        <meta name="description" content="Goinsides is a CRM like tools to provides more sales with your client">
+        <title>Application - Test</title>
+        <meta name="description" content="Cette application est un produit d'un test propose par Thierry">
         <meta name="keywords" content="Reactjs, Nodejs, Jsx, Express, MongoDB, JavaScript, Mern">
         <meta name="author" content="Mahady Manana">
         <base href="/">
