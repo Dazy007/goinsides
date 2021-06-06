@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const LoadablePlugin = require('@loadable/webpack-plugin');
 
 const CURRENT_WD = process.cwd();
 
@@ -15,7 +16,7 @@ const config = {
   output: {
     path: path.join(CURRENT_WD, '/build/'),
     filename: 'bundle.js',
-    publicPath: '/build/',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -40,11 +41,35 @@ const config = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new MiniCssExtractPlugin(),
+    new LoadablePlugin(),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
     alias: {
       'react-dom': '@hot-loader/react-dom',
+    },
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'async',
+      minSize: 20000,
+      minRemainingSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          reuseExistingChunk: true,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
     },
   },
 };

@@ -9,7 +9,7 @@ const config = {
   output: {
     path: path.join(CURRENT_WD, '/build/'),
     filename: 'server.js',
-    publicPath: '/build/',
+    publicPath: '/',
     libraryTarget: 'commonjs2',
   },
   externals: [nodeExternals()],

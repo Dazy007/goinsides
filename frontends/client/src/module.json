@@ -1,0 +1,23 @@
+[
+  {
+    "id": "HOMEPAGE_APP",
+    "label": "Fly",
+    "icon": "",
+    "component": "Homepage",
+    "path": "/"
+  },
+  {
+    "id": "LOGIN_APP",
+    "label": "Login",
+    "icon": "",
+    "component": "Login",
+    "path": "/login"
+  },
+  {
+    "id": "SIGNUP_APP",
+    "label": "Signup",
+    "icon": "",
+    "component": "Signup",
+    "path": "/signup"
+  }
+]

@@ -1,9 +1,12 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core';
 
-export const useStyles = makeStyles((theme: Theme) =>
+export const useStyles = makeStyles((_theme: Theme) =>
   createStyles({
     root: {
-      color: theme.palette.primary.main,
+      textTransform: 'none',
+    },
+    white: {
+      color: '#fff',
     },
   }),
 );
